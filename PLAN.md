@@ -92,7 +92,7 @@ alertas disparadas en BBDD). Pulido de UI/UX. Despliegue final.
 
 ## Estado actual
 
-- [ ] Milestone 1
+- [x] Milestone 1
 - [ ] Milestone 2
 - [ ] Milestone 3
 - [ ] Milestone 4
