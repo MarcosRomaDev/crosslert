@@ -43,8 +43,12 @@ y conectar Spring Boot a ella como parte de este milestone.
 Conectar la API de bolsa. Cachear las respuestas de precio en BBDD. Gestionar el rate
 limit (no volver a pedir lo que ya tenemos fresco).
 **Objetivo:** el corazón del proyecto. Es la fuente de datos de casi todo lo demás.
-**Decisiones a cerrar aquí:** API definitiva (Alpha Vantage / Finnhub), política de caché
-(cada cuánto se considera "caducado" un precio).
+**Decisiones a cerrar aquí:**
+- API definitiva: **Alpha Vantage** (decidido). Finnhub descartado — su endpoint de velas
+  para acciones US da 403 en el free tier, solo disponible de pago.
+- Política de caché (cada cuánto se considera "caducado" un precio). Pendiente — condicionada
+  por el límite de **25 peticiones/día** del free tier de Alpha Vantage, así que la caché debe
+  ser agresiva.
 
 ### 3. Buscar y ver un activo + gráfica de precio
 Buscar por ticker/nombre, ficha del activo, histórico de precio dibujado con Chart.js.
