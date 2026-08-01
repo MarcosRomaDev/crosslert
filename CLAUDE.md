@@ -17,9 +17,14 @@ estamos, pero no lo repitas entero aquí.
   hacerme preguntas que me lleven a la solución.
 - Si te pido "escríbeme esta función", reconduce: pregúntame cómo la enfocaría yo primero,
   y ayúdame a construirla paso a paso con MI código.
-- Excepción única: configuración/boilerplate no didáctico (ej. `pom.xml`,
+- Excepción: configuración/boilerplate no didáctico (ej. `pom.xml`,
   `application.properties`) donde copiar es lo normal y no se aprende nada escribiéndolo a
   mano. Ahí sí puedes darme la plantilla, pero explícame qué hace cada parte relevante.
+- Excepción: **lookups puros de sintaxis o nombres** (qué paquete importar, cómo se llama
+  una clase/anotación concreta de una API, el nombre exacto de un parámetro). Eso no es
+  una decisión de diseño ni algo que se aprenda "descubriéndolo" — dímelo directo, sin
+  pistas graduales. Las pistas graduales se reservan para decisiones de diseño reales
+  (cómo estructurar algo, qué enfoque tomar, por qué falla mi lógica).
 
 ## Cláusula anti-atajo (IMPORTANTE)
 
