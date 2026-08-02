@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
+import com.example.crosslert_backend.dto.AlphaVantageDailyResponseDTO;
+
 @Service
 public class AlphaVantageClient {
     private final RestClient restClient;
@@ -15,15 +17,15 @@ public class AlphaVantageClient {
     }   
 
     
-    public String getStockData(String symbol) {
-        String data = restClient.get()
+    public AlphaVantageDailyResponseDTO getStockData(String symbol) {
+        AlphaVantageDailyResponseDTO data = restClient.get()
                         .uri(uriBuilder -> uriBuilder
                             .path("/query")
                             .queryParam("function", "TIME_SERIES_DAILY")
                             .queryParam("symbol", symbol).queryParam("apikey", apiKey)
                             .build())
                         .retrieve()
-                        .body(String.class);
+                        .body(AlphaVantageDailyResponseDTO.class);
         return data;
     }
 
