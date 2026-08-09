@@ -26,20 +26,6 @@ public class Candle {
     public void setId(CandleId id) {
         this.id = id;
     }
-    public LocalDate getDate() {
-        return id != null ? id.getDate() : null;
-    }
-    public void setDate(LocalDate date) {
-        if (id == null) id = new CandleId();
-        id.setDate(date);
-    }
-    public String getSymbol() {
-        return id != null ? id.getSymbol() : null;
-    }
-    public void setSymbol(String symbol) {
-        if (id == null) id = new CandleId();
-        id.setSymbol(symbol);
-    }
     public BigDecimal getOpen() {
         return open;
     }

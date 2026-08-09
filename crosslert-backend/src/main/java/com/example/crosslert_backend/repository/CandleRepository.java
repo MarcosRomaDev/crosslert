@@ -12,6 +12,6 @@ import java.util.List;
 
 public interface CandleRepository extends JpaRepository<Candle, CandleId> {
 
-    Optional<Candle> findTopBySymbolOrderByDateDesc(String symbol);
-    List<Candle> findBySymbol(String symbol);
+    Optional<Candle> findTopByIdSymbolOrderByIdDateDesc(String symbol);
+    List<Candle> findByIdSymbol(String symbol);
 }
