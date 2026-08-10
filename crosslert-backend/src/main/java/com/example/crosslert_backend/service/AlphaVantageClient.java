@@ -4,7 +4,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-import com.example.crosslert_backend.dto.AlphaVantageDailyResponseDTO;
+import com.example.crosslert_backend.dto.candle.AlphaVantageDailyResponseDTO;
+import com.example.crosslert_backend.dto.stock.SymbolSearchBestMatchesDTO;
 
 @Service
 public class AlphaVantageClient {
@@ -28,6 +29,18 @@ public class AlphaVantageClient {
                         .body(AlphaVantageDailyResponseDTO.class);
         return data;
     }
+
+    public SymbolSearchBestMatchesDTO searchSymbol(String keywords) {
+    return restClient.get()
+            .uri(uriBuilder -> uriBuilder
+                .path("/query")
+                .queryParam("function", "SYMBOL_SEARCH")
+                .queryParam("keywords", keywords)
+                .queryParam("apikey", apiKey)
+                .build())
+            .retrieve()
+            .body(SymbolSearchBestMatchesDTO.class);
+}
 
     
 }
