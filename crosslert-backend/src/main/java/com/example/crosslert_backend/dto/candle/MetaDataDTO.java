@@ -1,4 +1,4 @@
-package com.example.crosslert_backend.dto;
+package com.example.crosslert_backend.dto.candle;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

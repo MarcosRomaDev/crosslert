@@ -11,8 +11,8 @@ import java.time.temporal.ChronoUnit;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.example.crosslert_backend.dto.AlphaVantageDailyResponseDTO;
-import com.example.crosslert_backend.dto.DailyDataDTO;
+import com.example.crosslert_backend.dto.candle.AlphaVantageDailyResponseDTO;
+import com.example.crosslert_backend.dto.candle.DailyDataDTO;
 import com.example.crosslert_backend.entity.Candle;
 import com.example.crosslert_backend.entity.CandleId;
 import com.example.crosslert_backend.repository.CandleRepository;
@@ -25,9 +25,9 @@ public class CandleService {
     @Value("${candle.cache.max.days}")
     private int cacheMax;
 
+    
     private final CandleRepository candleRepo;
     private final AlphaVantageClient alphaClient;
-
 
     public CandleService(CandleRepository candleRepo, AlphaVantageClient alphaClient) {
         this.candleRepo = candleRepo;

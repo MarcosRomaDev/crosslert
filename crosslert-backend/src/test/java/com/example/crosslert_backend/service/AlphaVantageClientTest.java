@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.crosslert_backend.dto.AlphaVantageDailyResponseDTO;
+import com.example.crosslert_backend.dto.candle.AlphaVantageDailyResponseDTO;
 
 @SpringBootTest
 public class AlphaVantageClientTest {
