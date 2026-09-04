@@ -7,8 +7,6 @@ bolsa: cada usuario mantiene su watchlist, consulta gráficas de precio e indica
 técnicos (medias móviles, RSI) y configura alertas —tanto por precio como por indicador—
 que le avisan cuando el mercado se mueve.
 
-Proyecto de portfolio del ciclo de **Desarrollo de Aplicaciones Web (DAW)**.
-
 ## Stack
 
 | Capa | Tecnología |
