@@ -1,15 +1,14 @@
 package com.example.crosslert_backend.dto.stock;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+public class StockSearchResultDTO {
 
-
-public class SymbolSearchDTO {
-
-    @JsonProperty("1. symbol")
     private String symbol;
-
-    @JsonProperty("2. name")
     private String name;
+
+    public StockSearchResultDTO(String symbol, String name) {
+        this.symbol = symbol;
+        this.name = name;
+    }
 
     public String getSymbol() {
         return symbol;
@@ -27,5 +26,4 @@ public class SymbolSearchDTO {
         this.name = name;
     }
 
-    
 }

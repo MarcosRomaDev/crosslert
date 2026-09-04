@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,13 @@
     <title>Crosslert</title>
   </head>
   <body>
-    <div id="hola"></div>
+    <label for="ticker">Ticker:</label>
+    <form id="ticker-form">
+      <input type="text" id="ticker" />
+      <button type="submit" id="ticker-button">Buscar</button>
+    </form>
+    <div id="result"></div>
+
     <script src="script.js"></script>
   </body>
 </html>

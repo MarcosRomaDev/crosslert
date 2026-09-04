@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.crosslert_backend.dto.stock.SymbolSearchDTO;
+import com.example.crosslert_backend.dto.stock.StockSearchResultDTO;
 import com.example.crosslert_backend.service.StockService;
 
 @RestController
@@ -21,7 +21,7 @@ public class StockController {
     }
 
     @GetMapping("/api/search/{keywords}")
-    public List<SymbolSearchDTO> search(@PathVariable String keywords) {
+    public List<StockSearchResultDTO> search(@PathVariable String keywords) {
         return stockService.getBestMatches(keywords);
     }
 }

@@ -7,14 +7,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SymbolSearchBestMatchesDTO {
 
     @JsonProperty("bestMatches")
-    private List<SymbolSearchDTO> symbolSearch;
+    private List<AlphaVantageSymbolSearchDTO> symbolSearch;
 
-    public List<SymbolSearchDTO> getBestMatches(){
+    public List<AlphaVantageSymbolSearchDTO> getBestMatches() {
         return symbolSearch;
     }
 
-    public void setBestMatches(List<SymbolSearchDTO> symbolSearch){
-        this.symbolSearch = symbolSearch; 
+    public void setBestMatches(List<AlphaVantageSymbolSearchDTO> symbolSearch) {
+        this.symbolSearch = symbolSearch;
     }
 
 }
